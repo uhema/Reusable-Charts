@@ -1,0 +1,148 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h6 class="card-title">Create Employees</h6>
+      </div>
+      <div class="card-body">
+        <!-- FULL NAME  -->
+        <div class="form-group d-flex has-error" [ngClass]="{'has-error' : formError.fullname}">
+          <label class="col-sm-2 control-label" for="fullname">Full Name</label>
+          <div class="col-sm-8">
+            <input id="fullname" formControlName="fullname" type="text" class="form-control" (blur) = "logValidationError()">         
+            <span style="color: red" *ngIf="formError.fullname">{{formError.fullname}}</span>         
+            
+          </div>
+        </div>
+        
+  
+        <!-- RADIO BUTTONS -->
+        <div class="form-group has-error">
+            <label class="col-md-2 control-label">Contact Address</label>
+            <div class="col-md-8">
+              <label class="radio-inline">
+                <input type="radio" value="email" (click) = "onContactperformence('email')" formControlName="contractPreference">Email
+              </label>
+              <label class="radio-inline">
+                  <input type="radio" value="phone" (click) = "onContactperformence('phone')" formControlName="contractPreference">Phone
+              </label>
+            </div>
+  
+        </div>
+        <!-- Email -->
+        <div formGroupName= "emailGroup">
+          <div class="form-group d-flex has-error" [ngClass]="{'has-error' : formError.email}">
+            <label class="col-sm-2 control-label" for="email">Email</label>
+            <div class="col-sm-8">
+              <input id="email" formControlName="email" type="text" class="form-control" (blur)= "logValidationError()">
+              <span class="color: red" *ngIf = "formError.email"> {{ formError.email}}</span>
+              <span></span>
+            </div>
+        </div>  
+        <!-- <div class="form-group d-flex has-error" [ngClass]="{'has-error' : formError.confirmEmail}">
+          <label class="col-sm-2 control-label" for="confirmEmail">Email</label>
+          <div class="col-sm-8">
+            <input id="confirmEmail" formControlName="confirmEmail" type="text" class="form-control" (blur)= "logValidationError()">
+            <span class="color: red" *ngIf = "formError.confirmEmail"> {{ formError.ConfirmEmail}}</span>
+            <span></span>
+          </div>
+      </div>   -->
+        </div>
+       
+        <!-- PHONE -->
+        <div class="form-group d-flex has-error" [ngClass]="{'has-error' : formError.phone}">
+            <label class="col-sm-2 control-label" for="phone">Phone</label>
+            <div class="col-sm-8">
+              <input id="phone" formControlName="email" type="number" class="form-control" (blur)= "logValidationError()">
+              <span class="color: red" *ngIf = "formError.phone"> {{ formError.phone}}</span>
+            </div>
+        </div>  
+  
+        <!-- NEW CODE -->
+        <div formGroupName="skills">
+          <div class="form-group d-flex has-error" [ngClass]= "{'has-error': formError.skillName}">
+                <label class="col-sm-2 control-label" for="skillName">Skill</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="skillName" placeholder="java, C#, Angular" formControlName="skillName" 
+                  (blur) = "logValidationError()">
+                </div>
+                <span class="color:red" *ngIf = "formError.skillName">{{formError.skillName}}</span>
+              
+          </div>
+  
+          <div class="form-group d-flex has-error" [ngClass]= "{'has-error': formError.expInYears}">
+            <label class="col-sm-2 control-label" for="expInYears">Experience</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control"placeholder="Experience In Years" formControlName="expInYears" 
+                (blur)="logValidationError()">
+                <span class="color:red" *ngIf= "formError.expInYears">{{ formError.expInYears}}</span>
+            </div>
+              
+          </div>
+  
+          <div class="form-group has-error" [ngClass]="{'has-error': formError.proficiency}">
+            <label class="col-md-2 control-label">Proficiency</label>
+            <div class="col-md-8">
+  
+              <label class="radio-inline">
+                <input type="radio" id="proficiency" value="beginner" formControlName="proficiency" (blur)= "logValidationError()">Beginner
+              </label>
+  
+              <label class="radio-inline">
+                  <input type="radio" id="proficiency" value="intermediate" formControlName="proficiency" (blur) = "logValidationError()">intermediate
+              </label>
+  
+              <label class="radio-inline">
+                  <input type="radio" id="proficiency" value="Advanced" formControlName="proficiency" (blur) = "logValidationError()">Advanced
+              </label>
+              <span class="color:red" *ngIf = "formError.proficiency">
+                {{formError.proficiency}}
+              </span>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+        <!-- END HERE -->
+      </div>
+  
+      <div class="card-footer">
+        <div class="btn-toolbar">
+            <button class="btn btn-sm btn-primary mr-3" type="submit">SAVE</button>
+            <button class="btn btn-sm btn-primary" type="button" (click)="onLoaddataclick()">LOAD DATA</button>
+        </div>
+        
+      </div>
+    </div>
+  
+  </form>
+  
+  
+  <!-- GETTING ERROR IN SCREEN  WE NEED THIS CODE-->
+  <br>
+  <table border="1">
+    <tr>
+      <th style="padding:10px">formGroup</th>
+      <th style="padding:10px">formControl (fullname)</th>
+    </tr>
+    <tr>
+      <td style="padding:10px">
+        touched: {{ employeeForm.touched}}
+        <br> dirty: {{employeeForm.dirty}}
+        <br> valid: {{employeeForm.valid}}
+        <br> Form Values: {{employeeForm.value | json}}
+      </td>
+      <td style="padding:10px">
+          touched: {{employeeForm.get('fullname').touched}}
+          <br> dirty: {{employeeForm.get('fullname').dirty}}
+          <br>  valid: {{employeeForm.get('fullname').valid}}
+          <br> Full Name Value : {{employeeForm.get('fullname').value}}
+      </td>
+    </tr>
+  
+  </table>
+  
+  <br>
+  <br>
+  
+  

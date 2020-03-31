@@ -1,0 +1,29 @@
+<!-- <h1>USERS</h1>
+
+<div class="container" *ngFor = "let obj1 of Usermodel">
+  <label></label>
+  <label></label>
+  <label></label>
+</div> -->
+
+
+
+<h3>Users</h3>
+<div class='table-responsive'>
+    <table class='table'>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Rent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products;">
+                <td>{{product.productID}}</td>
+                <td><a [routerLink]="['/product',product.productID]">{{product.name}} </a> </td>
+                <td>{{product.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

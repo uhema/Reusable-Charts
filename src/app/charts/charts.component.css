@@ -1,0 +1,206 @@
+.conter-reference {
+    margin: 1rem 1rem;
+    font-family: 'dxc-Regular';
+    border: 1px solid #E8E8E8;
+    border-top: none;
+}
+.container-header-ref {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #E8E8E8;
+    padding: 0.4rem;  
+    margin-bottom: 8px; 
+}
+.img-reference {
+    width: 2.5rem;
+    height: 1.8rem;
+}
+.img-reference-id {
+    width: 6rem;
+}
+.charts-logo-ref {
+    display: flex;
+    justify-content: center;
+}
+.heading-reference {
+    font-weight: 600;
+    font-size: 17px;
+}
+.sub-heading-reference {
+    font-size: 11px;
+    padding-left: 10px;
+    color: #575757;
+}
+.outages-count {
+    background: #EA1C0A;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin-right: .8rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+}
+.incidents-text-ref {
+    font-size: 18px;
+    font-weight: 600;
+}
+.warning-img {
+    width: 15px;
+}
+.sev-text-color {
+    background-color: #B00402;
+    border-radius: 50%;
+}
+.card-data-heading {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    align-items: center; 
+    margin-bottom: 1rem;   
+}
+.maincard-ref {
+    margin: 1rem 1rem 1rem 0;
+}
+.incident-card-reference {
+    background-color: #F2F2F2;
+    color: #575757;
+    font-size: 12px;
+    padding: 0.6rem 0.6rem;
+    border-radius: 0;
+}
+.charts-footer-ref {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    margin: 0 1rem 1rem 0.5rem;
+}
+.change-request-card {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 20%; 
+    border-radius: 10px; 
+    font-size: 12px;  
+    margin-right: 1.5rem;
+    border: 0;
+}
+.change-request-card-color-ref {
+    background-color:#1EA2B1;
+    color: #FFFFFF;    
+}
+.normal-request-card-color-ref {
+    color: #111111;
+    background-color: #FFC52E;
+}
+.emergency-request-card-color-ref {
+    color: #FFFFFF;
+    background-color: #EA1C0A;
+}
+.column-reference,
+.margin-top-ref {
+    margin-top: 1rem;
+}
+.reqestes-count {
+    font-size: 24px;
+    font-weight: 650;
+}
+.card-ref-id-charts {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5F5;
+    border: none;
+}
+.backup-ref,
+.ibuid-ref {    
+    border-radius: 10px;
+    padding: 3px 10px;
+    min-width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bacjup-color-ref {
+    background-color: #1ea2b1;
+    color: #FFFFFF;
+}
+.ibuils-color-ref {
+    background-color: #E3E000;
+    color: #000000;
+}
+.count-ref {
+    font-size: 16px;
+    font-weight: 600;
+}
+.totalbackups-id {
+    display: flex;
+    align-items: center;
+}
+.card-border-remover-id {
+    border: none;
+}
+.body-container-ref {
+    margin: 0 1rem 1rem 1rem;
+}
+.table-ref {
+    margin: 1rem 0 1rem 0;
+    font-size: 12px;
+}
+.change-title-ref {
+    width: 14rem;
+}
+.table td, .table th {
+    padding: .50rem;
+}
+.table thead th {
+    vertical-align: middle;
+    background-color: #F5F5F5;
+}
+.chart-header-img {
+    width: 16px;
+    margin-right: 5px;
+}
+.table td, .table th {
+    border: none;
+}
+.table-reference,
+.ibuid-model-text-ref {
+    font-size: 12px;
+}
+.table-reference thead th {
+    background-color: #d8d1d166;
+}
+.ibuid-model-text-ref span {
+    color: #2C99F4;
+    padding-left: 8px;
+}
+.model-header-reference h5 {
+    font-size: 15px;
+}
+.model-body-ref {
+    overflow-y: auto;
+    height: 30rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem 1rem 1rem;
+}
+.pointer {
+    cursor: pointer;
+}
+.close {
+    text-shadow: none;
+}
+.model-header-reference span{
+    background-color: #2C99F4;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-size: 1rem;
+}
+/* CHARTS */
+
+.charts-ref-id-piecharts {
+    overflow: hidden;
+    margin-bottom: 1rem;
+}

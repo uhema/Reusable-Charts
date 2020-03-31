@@ -1,0 +1,443 @@
+<div class="conter-reference">
+  <div class="container-header-ref">
+    <div class="charts-logo-ref">
+      <img src="assets/images/dashbord-log.png" class="img-reference pr-3">
+      <span class="heading-reference">Dashboard</span>
+    </div>
+    <div>
+      <img src="assets/images/head-img.svg" class="img-reference-id">
+    </div>
+  </div>
+  <!-- HEADER ENDS HERE -->
+  <div class="body-container-ref">
+    <div>
+      <span class="heading-reference">Change Requests</span>
+      <span class="sub-heading-reference ">Last Updated 11.30pm IST</span>
+    </div>
+    <div class="row">
+      <!-- CHANGES REQUESTS -->
+      <div class="col-9 column-reference">
+        <div class="d-flex">
+          <!-- STANDRED -->
+          <div class="card change-request-card change-request-card-color-ref">
+            <div class="d-flex flex-column">
+              <span class="reqestes-count">120</span>
+              <span>Standard</span>
+            </div>
+            <div>
+              <img src="assets/images/settings-img.svg" class="warning-img">
+            </div>
+          </div>
+          <!-- Normal -->
+          <div class="card change-request-card normal-request-card-color-ref">
+            <div class="d-flex flex-column">
+              <span class="reqestes-count">62</span>
+              <span>Normal</span>
+            </div>
+            <div>
+              <img src="assets/images/iconfinder.svg" class="warning-img">
+            </div>
+          </div>
+          <!--Emergency  -->
+          <div class="card change-request-card emergency-request-card-color-ref">
+            <div class="d-flex flex-column">
+              <span class="reqestes-count">42</span>
+              <span>Emergency</span>
+            </div>
+            <div>
+              <img src="assets/images/warning2.svg" class="warning-img">
+            </div>
+          </div>
+          <!-- END HERE -->
+        </div>
+        <!-- TABLE -->
+        <div class="table-ref">
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th>Primary Change ID</th>
+                <th>Change Title</th>
+                <th>Planned Start Date</th>
+                <th>Planned End Date</th>
+                <th>Affected CIs</th>
+                <th>Risk</th>
+                <th>Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>E-C01707325</td>
+                <td class="change-title-ref">RELEASE-MASTER RELEASE- UK region Hosts and Storage… movement from old san
+                  switch ports to new san switch ports— no activities during the Easter freeze</td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>11/01/2019</span>
+                    <span>15:00</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>13/12/2019</span>
+                    <span>18:00</span>
+                  </div>
+                </td>
+                <td>
+                  <span>pg_sher_48061.e-ssi.net</span>
+                </td>
+                <td>
+                  <span>pg_sher_48061.e-ssi.net</span>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>1 - Very High </span>
+                    <span>(e.g. Enterprise)</span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>E-C01707325</td>
+                <td class="change-title-ref">RELEASE-MASTER RELEASE- UK region Hosts and Storage… movement from old san
+                  switch ports to new san switch ports— no activities during the Easter freeze</td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>11/01/2019</span>
+                    <span>15:00</span>
+                  </div>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>13/12/2019</span>
+                    <span>18:00</span>
+                  </div>
+                </td>
+                <td>
+                  <span>pg_sher_48061.e-ssi.net</span>
+                </td>
+                <td>
+                  <span>pg_sher_48061.e-ssi.net</span>
+                </td>
+                <td>
+                  <div class="d-flex flex-column">
+                    <span>1 - Very High </span>
+                    <span>(e.g. Enterprise)</span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- CHARTS -->
+        <div class="row margin-top-ref">
+          <div class="col-6">
+            <div class="card card-border-remover-id">
+              <div class="card-header card-ref-id-charts">
+                <span class="heading-reference">Backup</span>
+                <div class="totalbackups-id">
+                  <span class="sub-heading-reference pr-2">Total Backups</span>
+                  <div class="backup-ref bacjup-color-ref">
+                    <img src="assets/images/backup-img.svg" class="chart-header-img">
+                    <span class="count-ref">3160</span>
+                  </div>
+
+                </div>
+              </div>
+              <!-- CARD HEADER END HERE -->
+              <div class="card-body">
+                <div class="chart-wrapper">
+                  <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                    [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend"
+                    [colors]="piechartColor">
+                  </canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second card -->
+          <div class="col-6">
+            <div class="card card-border-remover-id">
+              <div class="card-header card-ref-id-charts">
+                <span class="heading-reference">iBuild</span>
+                <div class="totalbackups-id">
+                  <span class="sub-heading-reference pr-2">Total Backups</span>
+                  <div class="backup-ref ibuils-color-ref">
+                    <img src="assets/images/ibuild-img.svg" class="chart-header-img">
+                    <span class="count-ref">200</span>
+                  </div>
+
+                </div>
+              </div>
+              <!-- CARD HEADER END HERE -->
+              <div class="card-body">
+                <div class="d-flex justify-content-end">
+                  <!-- Button trigger modal -->
+                  <a class="pointer ibuid-model-text-ref" data-toggle="modal" data-target="#exampleModal">
+                    <img src="assets/images/Layer_1 (1).svg" class="warning-img">
+                    <span>View Detailed Table</span>
+                  </a>
+                </div>
+                <div class="chart-wrapper">
+                  <!-- <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType"
+                    [options]="pieChartOptions" [plugins]="pieChartPlugins" [legend]="pieChartLegend">
+                  </canvas> -->
+                  <div class="chart-wrapper">
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                      [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+                    </canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END HERE -->
+      </div>
+      <!-- CHANGES REQUESTS END HERE -->
+      <!-- INCIDENTS OUTAGES -->
+      <div class="col-3">
+        <div class="d-flex">
+          <div class="outages-count"> 22</div>
+          <div class="d-flex flex-column">
+            <span class="incidents-text-ref">Incidents Outages</span>
+            <div>
+
+              <img src="assets/images/warning-img.png" class="warning-img">
+              <span class="sub-heading-reference pl-1">Requires Immediate Action</span>
+            </div>
+          </div>
+        </div>
+        <!-- INCIDES DETAILS 1 -->
+        <div class="maincard-ref">
+          <div class="card-data-heading">
+            <div>
+              <div class="card-color-common-ref  sev-text-color"></div>
+              <span>Sev1</span>
+            </div>
+            <span>INC0651829</span>
+          </div>
+          <div class="card incident-card-reference">
+            <span>13/12/2019 19:00</span>
+            <span>BIT GER EDIS</span>
+            <span>PC/Skype performance issues</span>
+          </div>
+        </div>
+        <!-- END HERE -->
+        <!-- INCIDES DETAILS 2 -->
+        <div class="maincard-ref">
+          <div class="card-data-heading">
+            <div>
+              <div class="card-color-common-ref  sev-text-color"></div>
+              <span>Sev2</span>
+            </div>
+            <span>INC0651829</span>
+          </div>
+          <div class="card incident-card-reference">
+            <span>13/12/2019 19:00</span>
+            <span>BIT GER EDIS</span>
+            <span>PC/Skype performance issues</span>
+          </div>
+        </div>
+        <!-- END HERE -->
+      </div>
+      <!-- END HERE INCIDENTS OUTAGES -->
+    </div>
+  </div>
+  <div class="charts-footer-ref">© DXC Technology</div>
+</div>
+
+
+
+
+<!-- MODEL TRAIL -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header model-header-reference border-0">
+        <h5 class="modal-title" id="exampleModalLabel">iBuild Detailed View</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body model-body-ref ">
+        <table class="table table-reference">
+          <thead class="thead-light">
+            <tr>
+              <th>Queue</th>
+              <th>Wintel</th>
+              <th>Linux</th>
+              <th>ESX-VM</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BUR Config</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>BUR Infrastructure</td>
+              <td>5</td>
+              <td>5</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>BUR Resource</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Operation Certification</td>
+              <td>16</td>
+              <td>16</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td>Ops Remediate Issues </td>
+              <td>14</td>
+              <td>14</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>OS Build - UX </td>
+              <td>13</td>
+              <td>13</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td>OS Build - Win</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>OS Install</td>
+              <td>20</td>
+              <td>20</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Procurement </td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>SA Resource </td>
+              <td>11</td>
+              <td>11</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>SAN Allocation</td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td> SAN Resource </td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>SAN Workflow Resource </td>
+              <td>1</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Senior SA Final Review</td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Senior SA Resource </td>
+              <td>2</td>
+              <td>2</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Server Eng. Resource </td>
+              <td>3</td>
+              <td>3</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Server Engineering</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Tools Config </td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+            </tr>
+            <!-- <tr>
+              <td>Total </td>
+              <td>130</td>
+              <td>130</td>
+              <td>130</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+
+</div>
+
+<!-- CHARTS -->
+<div class="charts-ref-id-piecharts">
+  <div class="row">
+    <div class="col-6">
+      <div class="chart-wrapper">
+        <canvas baseChart [data]="pieChartData1" [chartType]="pieChartType1" [options]="pieChartOptions2"
+          [plugins]="pieChartPlugins1" [legend]="pieChartLegend1" [labels]="pieChartLabels1">
+        </canvas>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="chart-wrapper">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+      </div>
+    </div>
+    <div class="col-6">
+
+    </div>
+    <div class="col-6">
+      <div class="chart-wrapper mt-2">
+        <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+          [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
+          [plugins]="lineChartPlugins">
+        </canvas>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="chart-wrapper">
+        <canvas baseChart 
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+<form [formGroup]="CustomerModel.formCustomerGroup">
+    <div class="card">
+      <div class="card-header">Add User</div>
+      <div class="card-body">
+         <!-- FULL NAME -->
+         <div class="form-group">
+             <label for="Name">Name</label>
+             <input formControlName="CustomerNameControl" [(ngModel)]="CustomerModel.CustomerName"  type=text class="form-control" /> 
+             <div class="" *ngIf="CustomerModel.formCustomerGroup.dirty && CustomerModel.formCustomerGroup.touched"
+             [hidden]="!(hasError('required','CustomerNameControl'))">name is required</div> 
+         </div>   
+         <!-- EMAIL -->
+         <div class="form-group">
+               <label for="Email">Email</label>
+               <input formControlName="CustomerEmailControl"  [(ngModel)]="CustomerModel.CustomerEmail" type=text class="form-control"/>
+               <div *ngIf="CustomerModel.formCustomerGroup.dirty && CustomerModel.formCustomerGroup.touched"
+               [hidden]="!(hasError('required','CustomerEmailControl'))">Email is required</div> 
+               <div *ngIf="CustomerModel.formCustomerGroup.dirty" 
+                     [hidden]="!(hasError('pattern','CustomerEmailControl'))" >format is not proper</div><br>        
+          </div>
+         <!-- DATE OF BIRTH -->
+         <div class="form-group">
+             <label for="DOB">DOB</label>
+             <input formControlName="CustomerDOBControl" [(ngModel)]="CustomerModel.CustomerDOB"  type="date" class="form-control"/>
+             <div *ngIf="CustomerModel.formCustomerGroup.dirty && CustomerModel.formCustomerGroup.touched "
+               [hidden]="!(hasError('required','CustomerDOBControl'))">Date of BIRTH required</div> 
+         </div>
+         <!-- END HERE -->
+
+      </div>                           
+      
+    </div>  
+    <br>
+    <input [disabled]="!(CustomerModel.formCustomerGroup.valid)" (click)="Add()"  type=button value="Add"/><br>
+    <br>
+    
+    
+</form>
+
+
+    
+    <table class="table">
+      <tr>
+        <td>Customer Name</td>
+        <td>Customer Email</td>
+        <td>Customer DOB</td>
+      </tr>
+      <tr *ngFor="let cust of CustomerModels">        
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerEmail}}</td>
+        <td>{{cust.CustomerDOB}}</td>
+      </tr>
+    </table>

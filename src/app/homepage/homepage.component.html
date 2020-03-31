@@ -1,0 +1,38 @@
+
+
+<div class="container-ref">
+    <div class="row">
+      <!-- TAB HEADING -->
+        <div class="col-2 leftpanel-reference-id">
+            <nav class="ordermanagement-nav-reference-id">                
+                  <div class="nav nav-tab flex-column" id="nav-tab" role="tablist">
+                     <a class="nav-item nav-link item active" id="nav-request-tab" data-toggle="tab"  routerLink="/Adduser"role="tab" aria-controls="nav-home" aria-selected="true"><span>Add User</span></a>
+                     <a class="nav-item nav-link userlist" id="nav-userlist-tab" data-toggle="tab" routerLink="/admin/list" role="tab" aria-controls="nav-userlist" aria-selected="false"><span>User List</span></a>  
+                  </div>           
+            </nav>
+        </div>
+        <!-- TAB CONTENT -->
+        <div class="col-10">
+            <router-outlet></router-outlet>
+            <!-- <div class="tab-content" id="nav-tabContent"> -->
+                <!-- <div class="tab-pane fade show active" id="nav-request" role="tabpanel" aria-labelledby="nav-home-tab">                      
+                     <app-form></app-form>
+                </div> -->
+
+                <!-- USER LIST -->
+                <!-- <div class="tab-pane fade" id="nav-userlist" role="tabpanel" aria-labelledby="nav-userlist-tab">
+                    <h1>Users</h1>                    
+                    <div  *ngFor= "let obj of userData" class="card card-reference-id">
+                        <label class="name-reference-id" (click)= "getuserlist()">{{obj.name}}</label>
+                        <label>{{ obj.email}}</label>
+                        <label class="website-reference">{{obj.website}} </label>                                     
+                    </div>
+                    <br>                     
+                       
+                </div> -->
+            <!-- </div> -->
+        </div>
+      
+      </div>
+</div>
+
