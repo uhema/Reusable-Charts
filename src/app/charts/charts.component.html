@@ -1,4 +1,5 @@
 <div class="conter-reference">
+  <!-- DASHBOARD HEADER -->
   <div class="container-header-ref">
     <div class="charts-logo-ref">
       <img src="assets/images/dashbord-log.png" class="img-reference pr-3">
@@ -15,10 +16,10 @@
       <span class="sub-heading-reference ">Last Updated 11.30pm IST</span>
     </div>
     <div class="row">
-      <!-- CHANGES REQUESTS -->
+      <!-- CHANGES REQUESTS CARD -->
       <div class="col-9 column-reference">
         <div class="d-flex">
-          <!-- STANDRED -->
+          <!-- STANDRED TEXT CARD -->
           <div class="card change-request-card change-request-card-color-ref">
             <div class="d-flex flex-column">
               <span class="reqestes-count">120</span>
@@ -28,7 +29,7 @@
               <img src="assets/images/settings-img.svg" class="warning-img">
             </div>
           </div>
-          <!-- Normal -->
+          <!-- Normal TEXT CARD -->
           <div class="card change-request-card normal-request-card-color-ref">
             <div class="d-flex flex-column">
               <span class="reqestes-count">62</span>
@@ -38,7 +39,7 @@
               <img src="assets/images/iconfinder.svg" class="warning-img">
             </div>
           </div>
-          <!--Emergency  -->
+          <!--Emergency TEXT CARD  -->
           <div class="card change-request-card emergency-request-card-color-ref">
             <div class="d-flex flex-column">
               <span class="reqestes-count">42</span>
@@ -377,20 +378,10 @@
               <td>4</td>
               <td>4</td>
               <td>4</td>
-            </tr>
-            <!-- <tr>
-              <td>Total </td>
-              <td>130</td>
-              <td>130</td>
-              <td>130</td>
-            </tr> -->
+            </tr>          
           </tbody>
         </table>
-      </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div> -->
+      </div>     
     </div>
   </div>
 
@@ -410,6 +401,7 @@
   </div>
 
   <div class="row">
+    <!-- barChart -->
     <div class="col-6">
       <div class="chart-wrapper">
         <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
@@ -418,8 +410,8 @@
       </div>
     </div>
     <div class="col-6">
-
     </div>
+    <!-- lineChart -->
     <div class="col-6">
       <div class="chart-wrapper mt-2">
         <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
@@ -428,16 +420,12 @@
         </canvas>
       </div>
     </div>
+    <!-- doughnutChart -->
     <div class="col-6">
       <div class="chart-wrapper">
-        <canvas baseChart 
-        [data]="doughnutChartData"
-        [labels]="doughnutChartLabels"
-        [chartType]="doughnutChartType">
-      </canvas>
-    </div>
-
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType">
+        </canvas>
+      </div>
     </div>
   </div>
 </div>
-

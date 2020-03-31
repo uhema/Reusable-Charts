@@ -43,10 +43,9 @@ export class ChartsComponent implements OnInit {
   barChartData: ChartDataSets[] = [
     { data: [1000, 1500, 700, 1200, 700, 500, 1000, 600 ], label: 'User Activity (Days of Weak Page View)' }
   ];
-  // END HERE
-  
-  // LINE CHART
-  
+  // END HERE  
+
+  // LINE CHART  
   lineChartData: ChartDataSets[] = [
     { data: [250, 236, 280, 250 , 213, 200 ], label: 'D0' },
     { data: [203, 200, 176, 180, 192, 180], label: 'D1' },
@@ -79,31 +78,7 @@ export class ChartsComponent implements OnInit {
         'rgba(153, 102, 255, 1)',
         'rgba(255, 159, 64, 1)'
     ]
-    }
-    // {
-    //   borderColor: ['gray','red','green', 'blue','black','yellow'],
-    //   backgroundColor: ['#00C175', "#2788E2", "#01AED6", "#D43F05", "#CA9A06", "#3DB672"]
-    // },
-    // {
-    //   borderColor: 'black',
-    //   backgroundColor: 'rgba(255,255,0,0.28)',
-    // },
-    // {
-    //   borderColor: 'green',
-    //   backgroundColor: '#00C175',
-    // },
-    // {
-    //   borderColor: 'black',
-    //   backgroundColor: 'rgba(255,255,0,0.28)',
-    // },
-    // {
-    //   borderColor: 'red',
-    //   backgroundColor: '#FF0000',
-    // },
-    // {
-    //   borderColor: 'red',
-    //   backgroundColor: 'FF0000',
-    // },
+    }    
   ];
 
   lineChartLegend = true;
@@ -111,25 +86,16 @@ export class ChartsComponent implements OnInit {
   lineChartType = 'line';
   // END HERE
 
-
   // dought chart
   doughnutChartLabels: Label[] = ['BMW', 'Ford', 'Tesla'];
-  doughnutChartData: MultiDataSet = [
-    [55, 25, 20]
-  ];
+  doughnutChartData: MultiDataSet = [[55, 25, 20]];
   doughnutChartType: ChartType = 'doughnut';
   // end here
  
   constructor() {
     monkeyPatchChartJsTooltip();
      monkeyPatchChartJsLegend();
-   }
-  
-  // doughnutChartLabels: Label[] = ['Success (99.32%)', 'Failure (0.68%)'];
-  // doughnutChartData: MultiDataSet = [
-  //   [28, 72]
-  // ];
-  // doughnutChartType: ChartType = 'doughnut';
+   }  
 
   ngOnInit() {
   }
