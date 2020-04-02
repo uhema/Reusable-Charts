@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
-
 import { MainRoute } from './Routing/app-routing.module';
 import {RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,10 +15,17 @@ import { ValidatorComponent } from './validator/validator.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ProductService } from './Services/product.service';
 import { ChartsComponent } from './charts/charts.component';
-
 import { ChartsModule } from 'ng2-charts';
-
-
+import { PiechartComponent } from './piechart/piechart.component';
+import { DoughnutChartComponent } from './doughnut-chart/doughnut-chart.component';
+import { RadarchartComponent } from './radarchart/radarchart.component';
+import { BarchartComponent } from './barchart/barchart.component';
+import { PolarChartComponent } from './polar-chart/polar-chart.component';
+import { CustomChatComponent } from './custom-chat/custom-chat.component';
+import { SedometerChartComponent } from './sedometer-chart/sedometer-chart.component';
+import { LinechartComponent } from './linechart/linechart.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +36,8 @@ import { ChartsModule } from 'ng2-charts';
     ValidatorComponent,
     LoginpageComponent,
     ChartsComponent,
-
+    PiechartComponent,   
+    DoughnutChartComponent, RadarchartComponent, BarchartComponent, PolarChartComponent, CustomChatComponent, SedometerChartComponent, LinechartComponent, HeaderComponent, FooterComponent,
   ],
   imports: [
     FormsModule,
@@ -39,9 +45,7 @@ import { ChartsModule } from 'ng2-charts';
     BrowserModule,
     RouterModule.forRoot(MainRoute),
     HttpClientModule,
-    ChartsModule
-
-   
+    ChartsModule   
   ],
   exports: [ ChartsModule],
   providers: [ UserdataService,

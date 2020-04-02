@@ -198,8 +198,12 @@
     border-radius: 50%;
     font-size: 1rem;
 }
-/* CHARTS */
-
+.card-color-common-ref {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
 .charts-ref-id-piecharts {
     overflow: hidden;
     margin-bottom: 1rem;

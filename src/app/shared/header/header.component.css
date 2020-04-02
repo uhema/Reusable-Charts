@@ -1,0 +1,15 @@
+.main-header-reference-id {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.header-content {
+    font-family: "dxc-Regular";
+    font-size: 14px;;
+    color: #FFFFFF;
+    margin-right: 3rem;    
+}
+.logo {
+    height: 50px;
+}
